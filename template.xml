@@ -1,0 +1,79 @@
+<template format="4"
+        revision="1"
+        name="Messaging Template"
+        description="Creates a messaging UI in MVP architecture">
+
+    <category value="Custom"/>
+
+    <parameter id="msgActivityName"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MessagingActivity"
+        help="The name of the activity class to create"/>
+		
+	<parameter id="msgActivityLayoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+		suggest="${activityToLayout(msgActivityName)}"
+        default="activity_messaging"
+        help="The name of the layout to create for the activity"/>
+		
+	<parameter id="msgFragmentName"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MessagingFragment"
+        help="The name of the fragment class to create"/>
+		
+	<parameter id="msgFragmentLayoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+		suggest="${activityToLayout(msgActivityName, 'fragment')}"
+        default="fragment_messaging"
+        help="The name of the layout to create for the fragment"/>
+		
+	<parameter 
+      id="packageName" 
+      name="Package name" 
+      type="string" 
+      constraints="package" 
+      default="com.example.messagingsample"/>
+	  
+	<parameter
+	  id="packageExtension"
+	  name="Package extension name"
+	  type="string"
+	  constraints="nonempty"
+	  default="messaging" />
+
+	<parameter 
+      id="msgPresenterName" 
+      name="Activity Presenter Name" 
+      type="string" 
+      constraints="class|unique|nonempty"  
+      default="MessagingPresenter" 
+      help="The name of the presenter class to create"/>
+
+	<parameter 
+      id="msgModelName" 
+      name="Model Name" 
+      type="string" 
+      constraints="class|nonempty"  
+      default="Message" 
+      help="The name of the model class to create"/>
+
+	<parameter 
+      id="msgContractName" 
+      name="Activity Contract Name" 
+      type="string" 
+      constraints="class|unique|nonempty"  
+      default="MessagingContract" 
+      help="The name of the contract class to create"/>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
