@@ -72,6 +72,21 @@
       constraints="class|unique|nonempty"  
       default="MessagingContract" 
       help="The name of the contract class to create"/>
+	  
+	<parameter 
+		id="msgStyle"
+		name="Message style"
+		type="enum"
+		default="arrow"
+		help="Choose your own message style">
+		<option id="round">Round Style</option>
+		<option id="arrow">Arrow Style</option>
+	</parameter>
+	
+	<thumbs>
+		<thumb msgStyle="arrow">MessageTemplateArrow.png</thumb>
+		<thumb msgStyle="round">MessageTemplateRound.png</thumb>
+	</thumbs>
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

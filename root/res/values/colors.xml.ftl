@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBgMessaging">#aec6c6c6</color>
     <color name="colorBgTyping">#FFFFFF</color>
+    <color name="colorMsgIncoming">#FFFFFF</color>
+    <color name="colorMsgOutgoing">#E1FFC7</color>
 </resources>

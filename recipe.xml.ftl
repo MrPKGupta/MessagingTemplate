@@ -67,17 +67,13 @@
 	<copy from="res/drawable/bg_send_button.xml"
             to="${escapeXmlAttribute(resOut)}/drawable/bg_send_button.xml" />
 			
+	<#if msgStyle == 'arrow'>
+	
 	<copy from="res/drawable-hdpi/balloon_incoming_normal.9.png"
             to="${escapeXmlAttribute(resOut)}/drawable-hdpi/balloon_incoming_normal.9.png" />
 			
 	<copy from="res/drawable-hdpi/balloon_outgoing_normal.9.png"
             to="${escapeXmlAttribute(resOut)}/drawable-hdpi/balloon_outgoing_normal.9.png" />
-			
-	<copy from="res/drawable-hdpi/ic_send.png"
-            to="${escapeXmlAttribute(resOut)}/drawable-hdpi/ic_send.png" />
-			
-	<copy from="res/drawable-mdpi/ic_send.png"
-            to="${escapeXmlAttribute(resOut)}/drawable-mdpi/ic_send.png" />
 			
 	<copy from="res/drawable-xhdpi/balloon_incoming_normal.9.png"
             to="${escapeXmlAttribute(resOut)}/drawable-xhdpi/balloon_incoming_normal.9.png" />
@@ -85,21 +81,35 @@
 	<copy from="res/drawable-xhdpi/balloon_outgoing_normal.9.png"
             to="${escapeXmlAttribute(resOut)}/drawable-xhdpi/balloon_outgoing_normal.9.png" />
 			
-	<copy from="res/drawable-xhdpi/ic_send.png"
-            to="${escapeXmlAttribute(resOut)}/drawable-xhdpi/ic_send.png" />
-			
 	<copy from="res/drawable-xxhdpi/balloon_incoming_normal.9.png"
             to="${escapeXmlAttribute(resOut)}/drawable-xxhdpi/balloon_incoming_normal.9.png" />
 			
 	<copy from="res/drawable-xxhdpi/balloon_outgoing_normal.9.png"
             to="${escapeXmlAttribute(resOut)}/drawable-xxhdpi/balloon_outgoing_normal.9.png" />
 			
+	<#elseif msgStyle == 'round'>
+	
+	<copy from="res/drawable/balloon_incoming_round.xml"
+            to="${escapeXmlAttribute(resOut)}/drawable/balloon_incoming_normal.xml" />
+			
+	<copy from="res/drawable/balloon_outgoing_round.xml"
+            to="${escapeXmlAttribute(resOut)}/drawable/balloon_outgoing_normal.xml" />
+	
+	</#if>
+		
+	<copy from="res/drawable-hdpi/ic_send.png"
+            to="${escapeXmlAttribute(resOut)}/drawable-hdpi/ic_send.png" />
+			
+	<copy from="res/drawable-mdpi/ic_send.png"
+            to="${escapeXmlAttribute(resOut)}/drawable-mdpi/ic_send.png" />
+			
+	<copy from="res/drawable-xhdpi/ic_send.png"
+            to="${escapeXmlAttribute(resOut)}/drawable-xhdpi/ic_send.png" />
+			
 	<copy from="res/drawable-xxhdpi/ic_send.png"
             to="${escapeXmlAttribute(resOut)}/drawable-xxhdpi/ic_send.png" />
 			
 	<copy from="res/drawable-xxxhdpi/ic_send.png"
             to="${escapeXmlAttribute(resOut)}/drawable-xxxhdpi/ic_send.png" />
-	
-	
 			 
 </recipe>
